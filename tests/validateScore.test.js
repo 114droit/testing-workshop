@@ -101,7 +101,7 @@ test("validateScore(50.5, {strictMode: true}) should return an object with valid
     });
 });
 
-test("validateScore((2/3), {strictMode: true} should return an object with valid: false, score: 0.6666666666666666, passed: false, grade: '', errors: [`Score muss eine ganze Zahl sein`]", () => {
+test("validateScore((NaN), {strictMode: true} should return an object with valid: false, score: 0.6666666666666666, passed: false, grade: '', errors: [`Score muss eine ganze Zahl sein`]", () => {
     expect(validateScore((NaN), {strictMode: true})).toStrictEqual({
         valid: false,
         score: NaN,
